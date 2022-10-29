@@ -52,7 +52,7 @@ gltfLoader.load('./assets/kings-hall/scene.gltf', function(gltf) {
     const model = gltf.scene;
     scene.add(model);
 
-    window.addEventListener('mouseup', function() {
+    window.addEventListener('mouseup touchend', function() {
         switch(position) {
             case 0:
                 moveCamera(-1.8, 1.6, 5);
