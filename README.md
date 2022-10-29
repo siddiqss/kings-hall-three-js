@@ -1,6 +1,6 @@
-# Solar System Animation
+# King's Hall Camera Movements
 
-Animation of solar system made with three.js
+Animation with camera movements with gsap library. Used three.js for managing 3D enviroment.
 
 • The ./static folder is where you put the images and 3D models.
 
