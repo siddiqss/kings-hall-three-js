@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King's Hall</title>
+
+    <style>body {
+  margin: 0;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 100%;
+  background-color: #000c;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#progress-bar {
+  width: 30%;
+  height: 2%;
+  margin-top: .5%;
+}
+
+progress::-moz-progress-bar {
+  filter: progid:DXImageTransform. Microsoft. gradient(startColorstr= "#00ff15", endColorstr= "#00d4ff", GradientType= 1);
+  background: linear-gradient(90deg, #00ff15 0%, #06ee33 20%, #15c637 40%, #0caa2a 60%, #07b527 80%, #09791a 100%, #00d4ff 100%);
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+  filter: progid:DXImageTransform. Microsoft. gradient(startColorstr= "#00ff15", endColorstr= "#00d4ff", GradientType= 1);
+  background: linear-gradient(90deg, #00ff15 0%, #06ee33 20%, #15c637 40%, #0caa2a 60%, #07b527 80%, #09791a 100%, #00d4ff 100%);
+}
+
+progress::-webkit-progress-bar {
+  border-radius: 10px;
+}
+
+label {
+  color: #fff;
+  font-size: 2rem;
+}
+
+</style>
+  </head>
+  <body>
+    <div class="progress-bar-container">
+      <label for="progress-bar">Loading...</label>
+      <progress id="progress-bar" value="0" max="100"></progress>
+    </div>
+    <script src="/index.64a4978e.js" defer=""></script>
+  </body>
+</html>
