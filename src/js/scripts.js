@@ -85,7 +85,8 @@ gltfLoader.load("./assets/kings-hall/scene.gltf", function (gltf) {
         position = 0;
     }
   });
-  window.addEventListener("touchstart", function () {
+  
+  window.addEventListener("pointerup", function () {
     switch (position) {
       case 0:
         moveCamera(-1.8, 1.6, 5);

@@ -545,7 +545,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 const scene = new _three.Scene();
 const camera = new _three.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-renderer.setClearColor(0xA3A3A3);
+renderer.setClearColor(0xa3a3a3);
 // const controls = new FirstPersonControls( camera, renderer.domElement );
 // controls.movementSpeed = 8;
 // controls.lookSpeed = 0.08;
@@ -568,6 +568,39 @@ gltfLoader.load("./assets/kings-hall/scene.gltf", function(gltf) {
     const model = gltf.scene;
     scene.add(model);
     window.addEventListener("mouseup", function() {
+        switch(position){
+            case 0:
+                moveCamera(-1.8, 1.6, 5);
+                rotateCamera(0, 0.1, 0);
+                position = 1;
+                break;
+            case 1:
+                moveCamera(2.8, 0, 3.6);
+                rotateCamera(0, -2, 0);
+                position = 2;
+                break;
+            case 2:
+                moveCamera(2.5, -0.9, 12.2);
+                rotateCamera(0.9, 0.6, -0.6);
+                position = 3;
+                break;
+            case 3:
+                moveCamera(-2.7, 0.6, 3.7);
+                rotateCamera(0.6, 1.9, -0.6);
+                position = 4;
+                break;
+            case 4:
+                moveCamera(-1.7, 0, 8.7);
+                rotateCamera(0, 4.7, 0);
+                position = 5;
+                break;
+            case 5:
+                moveCamera(0.5, 0.8, 10);
+                rotateCamera(0.3, 1.65, -0.3);
+                position = 0;
+        }
+    });
+    window.addEventListener("pointerup", function() {
         switch(position){
             case 0:
                 moveCamera(-1.8, 1.6, 5);
